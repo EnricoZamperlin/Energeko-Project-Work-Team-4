@@ -1,7 +1,7 @@
 # Team 4 - Progetto Energeko (Obbiettivo 7 Agenda 2030)
 **Supporters**: ITS LAST Academy, fondazione Edulife
 
-**Developers**: Enrico Zamperlin, Marco Ferrarese, Tommaso Lovato, Davide Castagnedi, Marco Batocchio
+**Developers**: Enrico Zamperlin, Marco Ferrarese, Tommaso Lovato, Davide Castagnedi, Marco Batocchio/
 **Capo progetto**: Enrico Zamperlin
 
 ### Descrizione
