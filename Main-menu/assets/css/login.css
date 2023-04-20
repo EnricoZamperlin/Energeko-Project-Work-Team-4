@@ -1,0 +1,226 @@
+
+@media all and (orientation:landscape) {
+    body{
+        overflow: hidden;
+        font-family: 'rubik', sans-serif;
+    }
+
+    .container{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #ff8c00;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .left{
+        margin: 1vmax;
+        border-radius: 2vmax;
+        position: relative;
+        top:0;
+        left:0;
+        background-color: #00aeff;
+        width: 50%;
+        height: 97vh;
+        z-index: 1;
+    }
+
+    .form {
+        padding-left: 10%;
+        width: 100%;
+        height: 60%;
+    }
+
+    .input-container {
+        width: 90%;
+        color: white;
+        padding: 1vmax;
+    }
+    .input-container > input {
+        width: 100%;
+        outline: none;
+        border-radius: 1vmin;
+        padding: 1vmin;
+        border: transparent;
+    }
+
+    .input-button{
+        text-align: center;
+    }
+    .input-button > button{
+        border-radius: 3vmax;
+        height: 4vmax;
+        background: #f28705;
+        color: white;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+        font-family: 'Arco', sans-serif;
+        font-size: 2.8vmax;
+    }
+
+    .input-button > button:disabled{
+        border-radius: 3vmax;
+        height: 4vmax;
+        background: #ffe2c0;
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-family: 'Arco', sans-serif;
+        font-size: 2.8vmax;
+    }
+
+    .input-button > button:hover button:disabled{
+        border-radius: 3vmax;
+        height: 4vmax;
+        background: #f28705;
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-family: 'Arco', sans-serif;
+        font-size: 2.8vmax;
+    }
+
+    .input-button > button:hover{
+        border-radius: 3vmax;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4vmax;
+        background: #f28705;
+        color: white;
+        width: 100%;
+        font-family: 'Arco', sans-serif;
+        /*animation: zoom infinite ease-in-out 2s;*/
+        font-size: 2.8vmax;
+    }
+
+    @keyframes zoom {
+        0%{height: 4vmax;}
+        50%{height: 6vmax;}
+        100%{height: 4vmax;}
+    
+    }
+
+    .icon > img {
+        box-sizing: border-box;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+    
+    .icon {
+        width: 40%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    
+    .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .slider {
+        position: absolute;
+        z-index: 50;
+        left: 80%;
+        animation: slide infinite linear 2s;
+        transition: all 1s;
+        background-repeat: repeat;
+        height: 40vmax;
+    }
+    
+    #slider1 {
+        top:0;
+    }
+    #slider2 {
+        top:39.5vmax;
+    }
+    #slider3 {
+        top:78.5vmax;
+    }
+    
+    @keyframes slide {
+        0% { transform: translate(0, 0%) }
+        100% { transform: translate(0, -100%) }
+    }
+
+    .buttons {
+        top: 4%;
+        right: 3%;
+        position: absolute;
+
+    }
+
+    .buttons {
+        top: 4%;
+        right: 3%;
+        position: absolute;
+
+    }
+
+    .btn {
+        width: 4vmax;
+        height: 4vmax;
+        border-radius: 100%;
+        background: #00aeff;
+        margin: 20%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .btn > img {
+        width: 3vmax;
+        color: white;
+    }
+    .btn:hover {
+        background: #8fdbff;
+    }
+    .btn:focus {
+        background: #8fdbff;
+    }
+}
+
+@media all and (orientation:portrait) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: #00aeff;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .container{
+        display: none;
+    }
+
+    #no-game {
+        background: #f28705;
+        padding: auto;
+        border-radius: 8px;
+        color: white;
+        font-size: 2em;
+        padding: 8px;
+        margin: 10px;
+        font-family: 'rubik', sans-serif;
+    }
+
+    
+}
+
+
