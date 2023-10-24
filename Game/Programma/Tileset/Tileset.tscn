@@ -1,0 +1,523 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://tileset/tileset.png" type="Texture" id=1]
+[ext_resource path="res://Tileset/tileset.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 27.243, 21 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 23.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 18.0526
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25.7424, 17.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 27.2426, 17.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.7424, 21 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 27.2425, 21 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 27.243, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 27.243, 32 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 29.75, 27.7673 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 32, 28 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 32, 28 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 29.5, 32 )
+
+[node name="Tileset" type="Node"]
+
+[node name="Barriera" type="Sprite" parent="."]
+position = Vector2( 581, 424 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 888, 1, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Barriera"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriera/StaticBody2D"]
+position = Vector2( -4, -11 )
+shape = SubResource( 16 )
+
+[node name="Erba1" type="Sprite" parent="."]
+position = Vector2( 100, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 417, 1, 64, 64 )
+
+[node name="Erba2" type="Sprite" parent="."]
+position = Vector2( 170, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 418, 70, 64, 64 )
+
+[node name="Cespuglio" type="Sprite" parent="."]
+position = Vector2( 100, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 417, 139, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cespuglio"]
+position = Vector2( 1, -1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cespuglio/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="Roccia" type="Sprite" parent="."]
+position = Vector2( 170, 179 )
+scale = Vector2( 0.99862, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 417, 207, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Roccia"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roccia/StaticBody2D"]
+position = Vector2( -7, 3 )
+rotation = 1.58218
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Roccia/StaticBody2D"]
+position = Vector2( 1, -7 )
+rotation = 1.58218
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Roccia/StaticBody2D"]
+position = Vector2( 7.00967, 5 )
+rotation = -3.11883
+shape = SubResource( 10 )
+
+[node name="Sentiero_Angolo1" type="Sprite" parent="."]
+position = Vector2( 285, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 1, 64, 64 )
+
+[node name="Sentiero_Angolo2" type="Sprite" parent="."]
+position = Vector2( 425, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 139, 1, 64, 64 )
+
+[node name="Sentiero_Angolo3" type="Sprite" parent="."]
+position = Vector2( 285, 249 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 139, 64, 64 )
+
+[node name="Sentiero_Angolo4" type="Sprite" parent="."]
+position = Vector2( 425, 249 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 139, 139, 64, 64 )
+
+[node name="Sentiero_Lato1" type="Sprite" parent="."]
+position = Vector2( 355, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 70, 1, 64, 64 )
+
+[node name="Sentiero_Lato2" type="Sprite" parent="."]
+position = Vector2( 355, 249 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 70, 139, 64, 64 )
+
+[node name="Sentiero_Lato3" type="Sprite" parent="."]
+position = Vector2( 285, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 70, 64, 64 )
+
+[node name="Sentiero_Lato4" type="Sprite" parent="."]
+position = Vector2( 425, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 139, 70, 64, 64 )
+
+[node name="Sentiero1" type="Sprite" parent="."]
+position = Vector2( 355, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 70, 70, 64, 64 )
+
+[node name="Sentiero2" type="Sprite" parent="."]
+position = Vector2( 543, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 244, 1, 64, 64 )
+
+[node name="Sentiero3" type="Sprite" parent="."]
+position = Vector2( 613, 109 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 312, 1, 64, 64 )
+
+[node name="Sentiero4" type="Sprite" parent="."]
+position = Vector2( 543, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 244, 70, 64, 64 )
+
+[node name="Sentiero5" type="Sprite" parent="."]
+position = Vector2( 613, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 312, 70, 64, 64 )
+
+[node name="Albero1" type="Sprite" parent="."]
+position = Vector2( 806, 109 )
+texture = ExtResource( 1 )
+offset = Vector2( 7.62939e-05, 0 )
+region_enabled = true
+region_rect = Rect2( 592, 1, 64, 64 )
+
+[node name="Albero2" type="Sprite" parent="."]
+position = Vector2( 736, 109 )
+texture = ExtResource( 1 )
+offset = Vector2( 1.52588e-05, 0 )
+region_enabled = true
+region_rect = Rect2( 524, 1, 64, 64 )
+
+[node name="Albero3" type="Sprite" parent="."]
+position = Vector2( 736, 179 )
+texture = ExtResource( 1 )
+offset = Vector2( 1.52588e-05, 0 )
+region_enabled = true
+region_rect = Rect2( 524, 70, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Albero3"]
+position = Vector2( -725.016, -280 )
+scale = Vector2( 0.985076, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Albero3/StaticBody2D"]
+position = Vector2( 742.743, 294.5 )
+shape = SubResource( 3 )
+
+[node name="Albero4" type="Sprite" parent="."]
+position = Vector2( 806, 179 )
+texture = ExtResource( 1 )
+offset = Vector2( 7.62939e-05, 0 )
+region_enabled = true
+region_rect = Rect2( 592, 70, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Albero4"]
+position = Vector2( -793.971, -280 )
+scale = Vector2( 0.985076, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Albero4/StaticBody2D"]
+position = Vector2( 800.758, 294.5 )
+shape = SubResource( 4 )
+
+[node name="Albero5" type="Sprite" parent="."]
+position = Vector2( 736, 249 )
+texture = ExtResource( 1 )
+offset = Vector2( 1.52588e-05, 0 )
+region_enabled = true
+region_rect = Rect2( 524, 139, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Albero5"]
+position = Vector2( -725.016, -349 )
+scale = Vector2( 0.985076, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Albero5/StaticBody2D"]
+position = Vector2( 742.743, 338 )
+shape = SubResource( 1 )
+
+[node name="Albero6" type="Sprite" parent="."]
+position = Vector2( 806, 249 )
+texture = ExtResource( 1 )
+offset = Vector2( 7.62939e-05, 0 )
+region_enabled = true
+region_rect = Rect2( 592, 139, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Albero6"]
+position = Vector2( -793.971, -349 )
+scale = Vector2( 0.985076, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Albero6/StaticBody2D"]
+position = Vector2( 800.757, 338 )
+shape = SubResource( 2 )
+
+[node name="F_Albero1" type="Sprite" parent="."]
+position = Vector2( 736, 349 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 694, 1, 64, 64 )
+
+[node name="F_Albero2" type="Sprite" parent="."]
+position = Vector2( 806, 349 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 762, 1, 64, 64 )
+
+[node name="F_Albero3" type="Sprite" parent="."]
+position = Vector2( 736, 420 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 694, 69, 64, 32 )
+
+[node name="F_Albero4" type="Sprite" parent="."]
+position = Vector2( 806, 420 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 762, 69, 64, 32 )
+
+[node name="Albero_Comb1" type="Sprite" parent="."]
+position = Vector2( 736, 492 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 694, 138, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Albero_Comb1"]
+position = Vector2( -1, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Albero_Comb1/StaticBody2D"]
+position = Vector2( 6, 0 )
+shape = SubResource( 6 )
+
+[node name="Albero_Comb2" type="Sprite" parent="."]
+position = Vector2( 806, 492 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 762, 138, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Albero_Comb2"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Albero_Comb2/StaticBody2D"]
+position = Vector2( -4.5, 0 )
+shape = SubResource( 7 )
+
+[node name="Acqua_Angolo1" type="Sprite" parent="."]
+position = Vector2( 285, 355 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 240, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Angolo1"]
+position = Vector2( 1, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Angolo1/StaticBody2D"]
+position = Vector2( 1, 3.96536 )
+shape = SubResource( 11 )
+
+[node name="Acqua_Angolo2" type="Sprite" parent="."]
+position = Vector2( 425, 355 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 139, 240, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Angolo2"]
+position = Vector2( -3, -5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Angolo2/StaticBody2D"]
+position = Vector2( 1.75, 8.23267 )
+shape = SubResource( 11 )
+
+[node name="Acqua_Angolo3" type="Sprite" parent="."]
+position = Vector2( 285, 496 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -0.5 )
+region_enabled = true
+region_rect = Rect2( 1, 377, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Angolo3"]
+position = Vector2( 0, -9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Angolo3/StaticBody2D"]
+position = Vector2( 2.5, 4.32315 )
+shape = SubResource( 11 )
+
+[node name="Acqua_Angolo4" type="Sprite" parent="."]
+position = Vector2( 425, 496 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 139, 377, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Angolo4"]
+position = Vector2( -4, -9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Angolo4/StaticBody2D"]
+position = Vector2( 1.5, 4.43069 )
+shape = SubResource( 11 )
+
+[node name="Acqua_Lato1" type="Sprite" parent="."]
+position = Vector2( 355, 355 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 70, 240, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Lato1"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Lato1/StaticBody2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 12 )
+
+[node name="Acqua_Lato2" type="Sprite" parent="."]
+position = Vector2( 355, 496 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -0.5 )
+region_enabled = true
+region_rect = Rect2( 70, 377, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Lato2"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Lato2/StaticBody2D"]
+position = Vector2( 0, -5 )
+shape = SubResource( 13 )
+
+[node name="Acqua_Lato3" type="Sprite" parent="."]
+position = Vector2( 285, 425 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 309, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Lato3"]
+position = Vector2( -1, -1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Lato3/StaticBody2D"]
+position = Vector2( 2.5, 1 )
+shape = SubResource( 14 )
+
+[node name="Acqua_Lato4" type="Sprite" parent="."]
+position = Vector2( 425, 425 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 139, 309, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Acqua_Lato4"]
+position = Vector2( -2, -0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acqua_Lato4/StaticBody2D"]
+shape = SubResource( 14 )
+
+[node name="Acqua" type="Sprite" parent="."]
+position = Vector2( 355, 425 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 70, 308, 64, 64 )

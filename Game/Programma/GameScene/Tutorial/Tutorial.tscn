@@ -1,0 +1,607 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Entities/Player/Geko_walk-left2.png" type="Texture" id=1]
+[ext_resource path="res://GameScene/Game/Geko.gd" type="Script" id=2]
+[ext_resource path="res://GameScene/Tutorial/Tutorial.gd" type="Script" id=3]
+[ext_resource path="res://entities/Case/Casa3.png" type="Texture" id=4]
+[ext_resource path="res://entities/Case/Casa1.png" type="Texture" id=5]
+[ext_resource path="res://Entities/Player/Geko.png" type="Texture" id=6]
+[ext_resource path="res://Entities/Player/Geko_left.png" type="Texture" id=7]
+[ext_resource path="res://Entities/Player/Geko_up.png" type="Texture" id=8]
+[ext_resource path="res://Entities/Player/Geko_walk-down1.png" type="Texture" id=9]
+[ext_resource path="res://Entities/Player/Geko_walk-down2.png" type="Texture" id=10]
+[ext_resource path="res://Entities/Player/Geko_walk-left1.png" type="Texture" id=11]
+[ext_resource path="res://Entities/Player/Geko_walk-up1.png" type="Texture" id=12]
+[ext_resource path="res://Entities/Player/Geko_walk-up2.png" type="Texture" id=13]
+[ext_resource path="res://tileset/Tileset.res" type="TileSet" id=14]
+[ext_resource path="res://GameScene/Tutorial/Timer.gd" type="Script" id=15]
+[ext_resource path="res://Entities/Dina.png" type="Texture" id=16]
+[ext_resource path="res://Global/Font/arco/ARCO for OSX.otf" type="DynamicFontData" id=17]
+[ext_resource path="res://GameScene/Tutorial/Pulsazione.gd" type="Script" id=18]
+[ext_resource path="res://Global/Font/Rubik/static/Rubik-SemiBold.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Entities/Tasti.png" type="Texture" id=22]
+[ext_resource path="res://Global/Font/Rubik/Rubik-VariableFont_wght.ttf" type="DynamicFontData" id=23]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "player_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "player_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "player_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 22.5, 12 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 20
+use_filter = true
+font_data = ExtResource( 23 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+content_margin_top = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=13]
+size = 12
+font_data = ExtResource( 21 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.94902, 0.529412, 0.0196078, 0.117647 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0, 0.0862745, 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0, 0.0862745, 1, 0 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 40
+use_filter = true
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 20
+use_filter = true
+font_data = ExtResource( 23 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+content_margin_top = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=20]
+size = 22
+use_filter = true
+font_data = ExtResource( 17 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 1, 0.545098, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 62.5, 26 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 14
+use_filter = true
+extra_spacing_bottom = -6
+font_data = ExtResource( 23 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.94902, 0.796078, 0.0196078, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 1 )
+tile_set = ExtResource( 14 )
+format = 1
+tile_data = PoolIntArray( -720894, 16, 0, -720893, 15, 0, -720892, 16, 0, -720891, 15, 0, -720890, 16, 0, -720889, 15, 0, -720888, 2, 0, -720887, 3, 0, -720886, 16, 0, -720885, 15, 0, -720884, 16, 0, -720883, 15, 0, -589832, 0, 0, -589831, 0, 0, -589830, 0, 0, -589829, 1, 0, -589828, 0, 0, -589827, 0, 0, -589826, 16, 0, -589825, 15, 0, -655360, 16, 0, -655359, 15, 0, -655358, 17, 0, -655357, 18, 0, -655356, 17, 0, -655355, 18, 0, -655354, 17, 0, -655353, 18, 0, -655352, 8, 0, -655351, 9, 0, -655350, 17, 0, -655349, 18, 0, -655348, 17, 0, -655347, 18, 0, -655346, 16, 0, -655345, 15, 0, -655344, 16, 0, -655343, 15, 0, -655342, 0, 0, -655341, 1, 0, -655340, 0, 0, -655339, 1, 0, -655338, 0, 0, -655337, 0, 0, -524296, 0, 0, -524295, 0, 0, -524294, 1, 0, -524293, 0, 0, -524292, 0, 0, -524291, 0, 0, -524290, 17, 0, -524289, 18, 0, -589824, 17, 0, -589823, 18, 0, -589822, 26, 0, -589821, 27, 0, -589820, 26, 0, -589819, 27, 0, -589818, 26, 0, -589817, 27, 0, -589816, 8, 0, -589815, 9, 0, -589814, 26, 0, -589813, 27, 0, -589812, 26, 0, -589811, 27, 0, -589810, 17, 0, -589809, 18, 0, -589808, 17, 0, -589807, 18, 0, -589806, 0, 0, -589805, 1, 0, -589804, 0, 0, -589803, 0, 0, -589802, 1, 0, -589801, 0, 0, -458760, 1, 0, -458759, 0, 0, -458758, 1, 0, -458757, 0, 0, -458756, 0, 0, -458755, 1, 0, -458754, 26, 0, -458753, 27, 0, -524288, 26, 0, -524287, 27, 0, -524286, 17, 0, -524285, 18, 0, -524284, 17, 0, -524283, 18, 0, -524282, 17, 0, -524281, 18, 0, -524280, 8, 0, -524279, 9, 0, -524278, 17, 0, -524277, 18, 0, -524276, 17, 0, -524275, 18, 0, -524274, 26, 0, -524273, 27, 0, -524272, 26, 0, -524271, 27, 0, -524270, 0, 0, -524269, 0, 0, -524268, 1, 0, -524267, 1, 0, -524266, 0, 0, -524265, 0, 0, -393224, 0, 0, -393223, 0, 0, -393222, 0, 0, -393221, 28, 0, -393220, 1, 0, -393219, 1, 0, -393218, 17, 0, -393217, 18, 0, -458752, 17, 0, -458751, 18, 0, -458750, 19, 0, -458749, 20, 0, -458748, 19, 0, -458747, 20, 0, -458746, 19, 0, -458745, 20, 0, -458744, 8, 0, -458743, 9, 0, -458742, 19, 0, -458741, 20, 0, -458740, 19, 0, -458739, 20, 0, -458738, 17, 0, -458737, 18, 0, -458736, 17, 0, -458735, 18, 0, -458734, 0, 0, -458733, 1, 0, -458732, 0, 0, -458731, 0, 0, -458730, 0, 0, -458729, 29, 0, -327688, 1, 0, -327687, 0, 0, -327686, 0, 0, -327685, 0, 0, -327684, 0, 0, -327683, 0, 0, -327682, 26, 0, -327681, 27, 0, -393216, 26, 0, -393215, 27, 0, -393214, 0, 0, -393213, 1, 0, -393212, 1, 0, -393211, 0, 0, -393210, 0, 0, -393209, 0, 0, -393208, 8, 0, -393207, 9, 0, -393206, 0, 0, -393205, 0, 0, -393204, 0, 0, -393203, 0, 0, -393202, 26, 0, -393201, 27, 0, -393200, 26, 0, -393199, 27, 0, -393198, 1, 0, -393197, 0, 0, -393196, 1, 0, -393195, 1, 0, -393194, 0, 0, -393193, 1, 0, -262152, 0, 0, -262151, 1, 0, -262150, 0, 0, -262149, 0, 0, -262148, 1, 0, -262147, 0, 0, -262146, 17, 0, -262145, 18, 0, -327680, 17, 0, -327679, 18, 0, -327678, 0, 0, -327677, 1, 0, -327676, 0, 0, -327675, 2, 0, -327674, 4, 0, -327673, 4, 0, -327672, 14, 0, -327671, 9, 0, -327670, 0, 0, -327669, 28, 0, -327668, 0, 0, -327667, 0, 0, -327666, 17, 0, -327665, 18, 0, -327664, 17, 0, -327663, 18, 0, -327662, 0, 0, -327661, 0, 0, -327660, 28, 0, -327659, 1, 0, -327658, 0, 0, -327657, 1, 0, -196616, 0, 0, -196615, 0, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 26, 0, -196609, 27, 0, -262144, 26, 0, -262143, 27, 0, -262142, 1, 0, -262141, 0, 0, -262140, 0, 0, -262139, 8, 0, -262138, 11, 0, -262137, 5, 0, -262136, 5, 0, -262135, 7, 0, -262134, 1, 0, -262133, 1, 0, -262132, 0, 0, -262131, 0, 0, -262130, 19, 0, -262129, 20, 0, -262128, 26, 0, -262127, 27, 0, -262126, 1, 0, -262125, 0, 0, -262124, 1, 0, -262123, 0, 0, -262122, 1, 0, -262121, 0, 0, -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 1, 0, -131076, 0, 0, -131075, 0, 0, -131074, 17, 0, -131073, 18, 0, -196608, 17, 0, -196607, 18, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 8, 0, -196602, 13, 0, -196601, 3, 0, -196600, 0, 0, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -196596, 0, 0, -196595, 1, 0, -196594, 28, 0, -196593, 29, 0, -196592, 17, 0, -196591, 18, 0, -196590, 0, 0, -196589, 0, 0, -196588, 0, 0, -196587, 1, 0, -196586, 0, 0, -196585, 1, 0, -65544, 1, 0, -65543, 0, 0, -65542, 0, 0, -65541, 1, 0, -65540, 0, 0, -65539, 0, 0, -65538, 26, 0, -65537, 27, 0, -131072, 26, 0, -131071, 27, 0, -131070, 1, 0, -131069, 0, 0, -131068, 0, 0, -131067, 6, 0, -131066, 12, 0, -131065, 9, 0, -131064, 29, 0, -131063, 1, 0, -131062, 0, 0, -131061, 1, 0, -131060, 1, 0, -131059, 0, 0, -131058, 29, 0, -131057, 28, 0, -131056, 26, 0, -131055, 27, 0, -131054, 0, 0, -131053, 1, 0, -131052, 1, 0, -131051, 0, 0, -131050, 0, 0, -131049, 1, 0, -8, 1, 0, -7, 1, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 17, 0, -1, 18, 0, -65536, 17, 0, -65535, 18, 0, -65534, 0, 0, -65533, 1, 0, -65532, 0, 0, -65531, 0, 0, -65530, 8, 0, -65529, 9, 0, -65528, 0, 0, -65527, 1, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 1, 0, -65522, 28, 0, -65521, 29, 0, -65520, 17, 0, -65519, 18, 0, -65518, 1, 0, -65517, 29, 0, -65516, 0, 0, -65515, 0, 0, -65514, 1, 0, -65513, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 1, 0, 65534, 26, 0, 65535, 27, 0, 0, 26, 0, 1, 27, 0, 2, 0, 0, 3, 0, 0, 4, 28, 0, 5, 0, 0, 6, 8, 0, 7, 13, 0, 8, 3, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 1, 0, 14, 16, 0, 15, 15, 0, 16, 26, 0, 17, 27, 0, 18, 0, 0, 19, 0, 0, 20, 1, 0, 21, 0, 0, 22, 0, 0, 23, 1, 0, 131064, 0, 0, 131065, 0, 0, 131066, 1, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 17, 0, 131071, 18, 0, 65536, 17, 0, 65537, 18, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 6, 0, 65543, 12, 0, 65544, 9, 0, 65545, 0, 0, 65546, 0, 0, 65547, 1, 0, 65548, 0, 0, 65549, 0, 0, 65550, 17, 0, 65551, 18, 0, 65552, 17, 0, 65553, 18, 0, 65554, 0, 0, 65555, 1, 0, 65556, 0, 0, 65557, 0, 0, 65558, 1, 0, 65559, 0, 0, 196600, 1, 0, 196601, 0, 0, 196602, 0, 0, 196603, 1, 0, 196604, 0, 0, 196605, 0, 0, 196606, 26, 0, 196607, 27, 0, 131072, 26, 0, 131073, 27, 0, 131074, 1, 0, 131075, 1, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 8, 0, 131080, 9, 0, 131081, 1, 0, 131082, 0, 0, 131083, 1, 0, 131084, 1, 0, 131085, 0, 0, 131086, 26, 0, 131087, 27, 0, 131088, 26, 0, 131089, 27, 0, 131090, 1, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 131094, 1, 0, 131095, 0, 0, 262136, 0, 0, 262137, 0, 0, 262138, 1, 0, 262139, 29, 0, 262140, 0, 0, 262141, 0, 0, 262142, 17, 0, 262143, 18, 0, 196608, 17, 0, 196609, 18, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 8, 0, 196616, 9, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 17, 0, 196623, 18, 0, 196624, 17, 0, 196625, 18, 0, 196626, 0, 0, 196627, 0, 0, 196628, 0, 0, 196629, 1, 0, 196630, 0, 0, 196631, 1, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 26, 0, 327679, 27, 0, 262144, 19, 0, 262145, 20, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 1, 0, 262151, 8, 0, 262152, 13, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 3, 0, 262157, 0, 0, 262158, 26, 0, 262159, 27, 0, 262160, 26, 0, 262161, 27, 0, 262162, 0, 0, 262163, 0, 0, 262164, 1, 0, 262165, 0, 0, 262166, 1, 0, 262167, 1, 0, 393208, 1, 0, 393209, 0, 0, 393210, 0, 0, 393211, 0, 0, 393212, 0, 0, 393213, 0, 0, 393214, 17, 0, 393215, 18, 0, 327680, 29, 0, 327681, 28, 0, 327682, 0, 0, 327683, 0, 0, 327684, 1, 0, 327685, 1, 0, 327686, 0, 0, 327687, 6, 0, 327688, 5, 0, 327689, 5, 0, 327690, 5, 0, 327691, 12, 0, 327692, 9, 0, 327693, 0, 0, 327694, 17, 0, 327695, 18, 0, 327696, 17, 0, 327697, 18, 0, 327698, 0, 0, 327699, 0, 0, 327700, 1, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 458744, 0, 0, 458745, 28, 0, 458746, 0, 0, 458747, 1, 0, 458748, 1, 0, 458749, 0, 0, 458750, 26, 0, 458751, 27, 0, 393216, 16, 0, 393217, 15, 0, 393218, 1, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 28, 0, 393227, 8, 0, 393228, 9, 0, 393229, 0, 0, 393230, 26, 0, 393231, 27, 0, 393232, 26, 0, 393233, 27, 0, 393234, 0, 0, 393235, 1, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 524280, 1, 0, 524281, 1, 0, 524282, 0, 0, 524283, 0, 0, 524284, 1, 0, 524285, 0, 0, 524286, 17, 0, 524287, 18, 0, 458752, 17, 0, 458753, 18, 0, 458754, 0, 0, 458755, 1, 0, 458756, 0, 0, 458757, 29, 0, 458758, 1, 0, 458759, 0, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 6, 0, 458764, 7, 0, 458765, 0, 0, 458766, 17, 0, 458767, 18, 0, 458768, 17, 0, 458769, 18, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 28, 0, 458774, 1, 0, 458775, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 29, 0, 589822, 19, 0, 589823, 20, 0, 524288, 19, 0, 524289, 20, 0, 524290, 0, 0, 524291, 1, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 1, 0, 524300, 0, 0, 524301, 0, 0, 524302, 19, 0, 524303, 20, 0, 524304, 19, 0, 524305, 20, 0, 524306, 29, 0, 524307, 0, 0, 524308, 1, 0, 524309, 1, 0, 524310, 0, 0, 524311, 0, 0, 655352, 30, 0, 655353, 34, 0, 655354, 34, 0, 655355, 34, 0, 655356, 34, 0, 655357, 34, 0, 655358, 34, 0, 655359, 34, 0, 589824, 34, 0, 589825, 34, 0, 589826, 34, 0, 589827, 34, 0, 589828, 34, 0, 589829, 34, 0, 589830, 34, 0, 589831, 34, 0, 589832, 34, 0, 589833, 34, 0, 589834, 34, 0, 589835, 34, 0, 589836, 34, 0, 589837, 34, 0, 589838, 34, 0, 589839, 34, 0, 589840, 34, 0, 589841, 34, 0, 589842, 34, 0, 589843, 34, 0, 589844, 34, 0, 589845, 34, 0, 589846, 34, 0, 589847, 31, 0, 720888, 36, 0, 720889, 38, 0, 720890, 38, 0, 720891, 38, 0, 720892, 38, 0, 720893, 38, 0, 720894, 38, 0, 720895, 38, 0, 655360, 38, 0, 655361, 38, 0, 655362, 38, 0, 655363, 38, 0, 655364, 38, 0, 655365, 38, 0, 655366, 38, 0, 655367, 38, 0, 655368, 38, 0, 655369, 38, 0, 655370, 38, 0, 655371, 38, 0, 655372, 38, 0, 655373, 38, 0, 655374, 38, 0, 655375, 38, 0, 655376, 38, 0, 655377, 38, 0, 655378, 38, 0, 655379, 38, 0, 655380, 38, 0, 655381, 38, 0, 655382, 38, 0, 655383, 37, 0, 786424, 36, 0, 786425, 38, 0, 786426, 38, 0, 786427, 38, 0, 786428, 38, 0, 786429, 38, 0, 786430, 38, 0, 786431, 38, 0, 720896, 38, 0, 720897, 38, 0, 720898, 38, 0, 720899, 38, 0, 720900, 38, 0, 720901, 38, 0, 720902, 38, 0, 720903, 38, 0, 720904, 38, 0, 720905, 38, 0, 720906, 38, 0, 720907, 38, 0, 720908, 38, 0, 720909, 38, 0, 720910, 38, 0, 720911, 38, 0, 720912, 38, 0, 720913, 38, 0, 720914, 38, 0, 720915, 38, 0, 720916, 38, 0, 720917, 38, 0, 720918, 38, 0, 720919, 37, 0, 851960, 36, 0, 851961, 38, 0, 851962, 38, 0, 851963, 38, 0, 851964, 38, 0, 851965, 38, 0, 851966, 38, 0, 851967, 38, 0, 786432, 38, 0, 786433, 38, 0, 786434, 38, 0, 786435, 38, 0, 786436, 38, 0, 786437, 38, 0, 786438, 38, 0, 786439, 38, 0, 786440, 38, 0, 786441, 38, 0, 786442, 38, 0, 786443, 38, 0, 786444, 38, 0, 786445, 38, 0, 786446, 38, 0, 786447, 38, 0, 786448, 38, 0, 786449, 38, 0, 786450, 38, 0, 786451, 38, 0, 786452, 38, 0, 786453, 38, 0, 786454, 38, 0, 786455, 37, 0, 917496, 32, 0, 917497, 35, 0, 917498, 35, 0, 917499, 35, 0, 917500, 35, 0, 917501, 35, 0, 917502, 35, 0, 917503, 35, 0, 851968, 35, 0, 851969, 35, 0, 851970, 35, 0, 851971, 35, 0, 851972, 35, 0, 851973, 35, 0, 851974, 35, 0, 851975, 35, 0, 851976, 35, 0, 851977, 35, 0, 851978, 35, 0, 851979, 35, 0, 851980, 35, 0, 851981, 35, 0, 851982, 35, 0, 851983, 35, 0, 851984, 35, 0, 851985, 35, 0, 851986, 35, 0, 851987, 35, 0, 851988, 35, 0, 851989, 35, 0, 851990, 35, 0, 851991, 33, 0 )
+
+[node name="Casa1" type="Sprite" parent="."]
+position = Vector2( -325, -209 )
+texture = ExtResource( 5 )
+
+[node name="Casa2" type="Sprite" parent="."]
+position = Vector2( 1324, 220 )
+texture = ExtResource( 4 )
+
+[node name="Geko" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedPlayer" type="AnimatedSprite" parent="Geko"]
+position = Vector2( 467, 338 )
+frames = SubResource( 1 )
+animation = "player_down"
+
+[node name="Camera2D" type="Camera2D" parent="Geko/AnimatedPlayer"]
+position = Vector2( 4, 8 )
+current = true
+limit_left = -400
+limit_top = -600
+limit_right = 1400
+limit_bottom = 800
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geko"]
+visible = false
+position = Vector2( 467, 370 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Geko"]
+position = Vector2( 467, 358 )
+scale = Vector2( 0.7, 0.7 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+
+[node name="Null" type="Sprite" parent="Geko"]
+z_index = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Intro" type="ReferenceRect" parent="Geko/Null"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 435.625
+margin_top = 292.375
+margin_right = 435.625
+margin_bottom = 292.375
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Dina" type="TextureRect" parent="Geko/Null/Intro"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -420.625
+margin_top = -0.375015
+margin_right = -30.6249
+margin_bottom = 413.625
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 16 )
+stretch_mode = 1
+
+[node name="Label1" type="Label" parent="Geko/Null/Intro"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -147.625
+margin_top = 13.625
+margin_right = 300.375
+margin_bottom = 112.625
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = " Ehi ciao, io sono Dina, ti dò il benvenuto 
+nel mondo di Lumia, dove tutti si aiutano
+ a vicenda per un obiettivo comune ....     "
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="avanti" type="Label" parent="Geko/Null/Intro/Label1"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -26.0
+margin_right = -12.0
+margin_bottom = -11.0
+custom_colors/font_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "premi"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Geko/Null/Intro/Label1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -219.0
+margin_top = -45.5
+margin_right = 220.0
+margin_bottom = 44.5
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+
+[node name="Label2" type="Label" parent="Geko/Null/Intro"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -147.625
+margin_top = 13.625
+margin_right = 202.375
+margin_bottom = 112.625
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "... RISPARMIARE!!
+Ora ti insegnerò come muoverti in questo mondo."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="avanti" type="Label" parent="Geko/Null/Intro/Label2"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -26.0
+margin_right = -12.0
+margin_bottom = -11.0
+custom_colors/font_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "premi"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Geko/Null/Intro/Label2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -45.5
+margin_right = 170.0
+margin_bottom = 44.5
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+
+[node name="Label3" type="Label" parent="Geko/Null/Intro"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -120.625
+margin_top = 13.625
+margin_right = 119.375
+margin_bottom = 112.625
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Bravoo!!
+Ora raggiungi la fine 
+del percorso   "
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="avanti" type="Label" parent="Geko/Null/Intro/Label3"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -26.0
+margin_right = -12.0
+margin_bottom = -11.0
+custom_colors/font_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "premi"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Geko/Null/Intro/Label3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -45.5
+margin_right = 116.0
+margin_bottom = 44.5
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+
+[node name="Tasti" type="TextureRect" parent="Geko/Null"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 244.5
+margin_top = 480.5
+margin_right = 655.5
+margin_bottom = 605.5
+texture = ExtResource( 22 )
+
+[node name="W" type="ColorRect" parent="Geko/Null/Tasti"]
+anchor_left = 0.192
+anchor_right = 0.317
+anchor_bottom = 0.4
+margin_left = 0.0879974
+margin_right = -0.287003
+color = Color( 0.94902, 0.529412, 0.0196078, 0.392157 )
+
+[node name="S" type="ColorRect" parent="Geko/Null/Tasti"]
+visible = false
+anchor_left = 0.192
+anchor_right = 0.317
+anchor_bottom = 0.4
+margin_left = 0.0879974
+margin_top = 70.0
+margin_right = -0.287003
+margin_bottom = 70.0
+color = Color( 0.94902, 0.529412, 0.0196078, 0.392157 )
+
+[node name="A" type="ColorRect" parent="Geko/Null/Tasti"]
+visible = false
+anchor_left = 0.192
+anchor_right = 0.317
+anchor_bottom = 0.4
+margin_left = -73.912
+margin_top = 70.0
+margin_right = -74.287
+margin_bottom = 70.0
+color = Color( 0.94902, 0.529412, 0.0196078, 0.392157 )
+
+[node name="D" type="ColorRect" parent="Geko/Null/Tasti"]
+visible = false
+anchor_left = 0.192
+anchor_right = 0.317
+anchor_bottom = 0.4
+margin_left = 74.088
+margin_top = 70.0
+margin_right = 73.713
+margin_bottom = 70.0
+color = Color( 0.94902, 0.529412, 0.0196078, 0.392157 )
+
+[node name="E" type="ColorRect" parent="Geko/Null/Tasti"]
+visible = false
+anchor_left = 0.192
+anchor_right = 0.317
+anchor_bottom = 0.4
+margin_left = 242.088
+margin_right = 241.713
+color = Color( 0.94902, 0.529412, 0.0196078, 0.392157 )
+
+[node name="SHIFT" type="ColorRect" parent="Geko/Null/Tasti"]
+visible = false
+anchor_left = 0.192
+anchor_right = 0.317
+anchor_bottom = 0.4
+margin_left = 210.088
+margin_top = 70.0
+margin_right = 280.713
+margin_bottom = 70.0
+color = Color( 0.94902, 0.529412, 0.0196078, 0.392157 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 14 )
+format = 1
+tile_data = PoolIntArray( -655353, 25, 0, -655350, 24, 0, -589822, 22, 0, -589821, 23, 0, -589820, 22, 0, -589819, 23, 0, -589818, 22, 0, -589817, 23, 0, -589814, 22, 0, -589813, 23, 0, -589812, 22, 0, -589811, 23, 0, -524288, 22, 0, -524287, 23, 0, -524286, 24, 0, -524285, 25, 0, -524284, 24, 0, -524283, 25, 0, -524282, 24, 0, -524281, 25, 0, -524278, 24, 0, -524277, 25, 0, -524276, 24, 0, -524275, 25, 0, -524274, 22, 0, -524273, 23, 0, -458752, 24, 0, -458751, 25, 0, -458738, 24, 0, -458737, 25, 0, -393216, 22, 0, -393215, 23, 0, -393202, 22, 0, -393201, 23, 0, -327680, 24, 0, -327679, 25, 0, -327666, 24, 0, -327665, 25, 0, -262144, 22, 0, -262143, 23, 0, -196608, 24, 0, -196607, 25, 0, -131072, 22, 0, -131071, 23, 0, -65536, 24, 0, -65535, 25, 0, 0, 22, 0, 1, 23, 0, 14, 22, 0, 15, 23, 0, 65536, 24, 0, 65537, 25, 0, 65550, 24, 0, 65551, 25, 0, 131072, 22, 0, 131073, 23, 0, 131086, 22, 0, 131087, 23, 0, 196608, 24, 0, 196609, 25, 0, 196622, 24, 0, 196623, 25, 0, 262158, 22, 0, 262159, 23, 0, 327694, 24, 0, 327695, 25, 0, 393216, 22, 0, 393217, 23, 0, 393230, 22, 0, 393231, 23, 0, 458752, 24, 0, 458753, 25, 0, 458766, 24, 0, 458767, 25, 0 )
+
+[node name="TileMap3(collisione)" type="TileMap" parent="."]
+tile_set = ExtResource( 14 )
+format = 1
+tile_data = PoolIntArray( -720889, 40, 0, -720888, 40, 0, -720887, 40, 0, -720886, 536870952, 0, -655353, 40, 0, -655350, 536870952, 0, -589817, 40, 0, -589814, 536870952, 0, -458758, 40, 0, -458755, 536870952, 0, -524287, 40, 0, -524281, 40, 0, -524278, 536870952, 0, -524274, 536870952, 0, -393222, 40, 0, -393219, 536870952, 0, -458751, 40, 0, -458745, 40, 0, -458742, 536870952, 0, -458738, 536870952, 0, -458731, 536870952, 0, -327686, 40, 0, -327683, 536870952, 0, -393215, 40, 0, -393202, 536870952, 0, -393195, 536870952, 0, -262152, 40, 0, -327679, 40, 0, -327666, 536870952, 0, -196616, 40, 0, -262143, 40, 0, -262130, 536870952, 0, -131082, 40, 0, -196607, 40, 0, -65546, 40, 0, -131071, 40, 0, -10, 40, 0, -65535, 40, 0, -65520, 536870952, 0, 65526, 40, 0, 1, 40, 0, 16, 536870952, 0, 131062, 40, 0, 65537, 40, 0, 65552, 536870952, 0, 196598, 40, 0, 131073, 40, 0, 131086, 536870952, 0, 262134, 40, 0, 196609, 40, 0, 196622, 536870952, 0, 327670, 40, 0, 262145, 40, 0, 262158, 536870952, 0, 393206, 40, 0, 393215, 40, 0, 327694, 536870952, 0, 458742, 40, 0, 458751, 40, 0, 393230, 536870952, 0, 524278, 40, 0, 524287, 40, 0, 458766, 536870952, 0, 589814, 40, 0, 524289, 40, 0, 524302, 536870952, 0, 655350, 40, 0, 720886, 40, 0, 786422, 40, 0, 851958, 40, 0, 917494, 40, 0, 983030, 40, 0 )
+
+[node name="Vittoria" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -600.0
+margin_right = 100.0
+margin_bottom = -600.0
+color = Color( 0, 0, 0, 0.509804 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Vittoria"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -321.0
+margin_top = -200.0
+margin_right = 359.0
+margin_bottom = -111.0
+custom_fonts/font = SubResource( 17 )
+text = "Hai completato il tutorial"
+align = 1
+autowrap = true
+
+[node name="Suggerimento" type="ReferenceRect" parent="Vittoria"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Dina" type="TextureRect" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.0
+margin_top = -40.0
+margin_right = -52.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 16 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -162.0
+margin_top = -16.0
+margin_right = 228.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+text = "Hai raggiunto la fine del percorso, ora puoi andare ad aiutare gli abitanti di Lumia a RISPARMIARE!!"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = 200.0
+margin_right = 70.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 20 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+text = "avanti"
+__meta__ = {
+"_editor_description_": "	"
+}
+
+[node name="Mappa" type="StaticBody2D" parent="."]
+position = Vector2( 549, -591 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mappa"]
+position = Vector2( 27.5, 16 )
+shape = SubResource( 8 )
+
+[node name="Label" type="Label" parent="Mappa"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 60.0
+margin_top = 12.0
+margin_right = 200.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "Premi \"E\" per andare alla mappa"
+align = 1
+autowrap = true
+
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource( 15 )
+
+[node name="Pulsazione" type="Timer" parent="."]
+script = ExtResource( 18 )
+
+[connection signal="pressed" from="Geko/Null/Intro/Label1/Button" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="Geko/Null/Intro/Label2/Button" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Geko/Null/Intro/Label3/Button" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Vittoria/Suggerimento/Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Pulsazione" to="." method="_on_Pulsazione_timeout"]

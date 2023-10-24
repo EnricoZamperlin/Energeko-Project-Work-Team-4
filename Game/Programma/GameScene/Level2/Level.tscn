@@ -1,0 +1,957 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://GameScene/Level2/img/bagno.png" type="Texture" id=1]
+[ext_resource path="res://GameScene/Level2/img/Lavandino/Lavandino_perdita2.png" type="Texture" id=2]
+[ext_resource path="res://GameScene/Level2/Level.gd" type="Script" id=3]
+[ext_resource path="res://GameScene/Level2/Lavandino.gd" type="Script" id=4]
+[ext_resource path="res://GameScene/Level2/img/Finestra/Finestra1.png" type="Texture" id=5]
+[ext_resource path="res://GameScene/Level2/Finestra.gd" type="Script" id=6]
+[ext_resource path="res://GameScene/Level2/img/Water.png" type="Texture" id=7]
+[ext_resource path="res://Global/Font/Rubik/static/Rubik-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://GameScene/Level2/Suono.gd" type="Script" id=9]
+[ext_resource path="res://Global/Font/arco/ARCO for OSX.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://Entities/Dina.png" type="Texture" id=11]
+[ext_resource path="res://Global/Font/Rubik/Rubik-VariableFont_wght.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://GameScene/Level2/img/Papera.png" type="Texture" id=13]
+[ext_resource path="res://GameScene/Level2/img/Cassetta/Cassetta1.png" type="Texture" id=14]
+[ext_resource path="res://GameScene/Level2/Armadietto.gd" type="Script" id=15]
+[ext_resource path="res://GameScene/Level2/img/Secchio/Secchio_getto.png" type="Texture" id=16]
+[ext_resource path="res://GameScene/Level2/Secchio.gd" type="Script" id=17]
+[ext_resource path="res://GameScene/Level2/img/Piante.png" type="Texture" id=18]
+[ext_resource path="res://GameScene/Level2/img/Armadietto/Armadietto_chiuso.png" type="Texture" id=19]
+[ext_resource path="res://GameScene/Level2/Cassetta.gd" type="Script" id=20]
+[ext_resource path="res://Global/Font/Rubik/static/Rubik-SemiBold.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Global/Sound/quak.wav" type="AudioStream" id=22]
+[ext_resource path="res://Global/Sound/water.wav" type="AudioStream" id=23]
+[ext_resource path="res://GameScene/Level2/img/Cassetta/Chiave.png" type="Texture" id=24]
+[ext_resource path="res://GameScene/Level2/img/Cassetta/Frammento1.png" type="Texture" id=25]
+[ext_resource path="res://GameScene/Level2/img/Cassetta/Frammento3.png" type="Texture" id=26]
+[ext_resource path="res://GameScene/Level2/img/Cassetta/Frammento4.png" type="Texture" id=27]
+[ext_resource path="res://GameScene/Level2/img/Cassetta/Frammento2.png" type="Texture" id=28]
+[ext_resource path="res://GameScene/Level2/img/Lavandino/Lavandino_hd.png" type="Texture" id=29]
+[ext_resource path="res://GameScene/Level2/img/Secchio/Secchio_pieno.png" type="Texture" id=30]
+[ext_resource path="res://GameScene/Level2/Piante.gd" type="Script" id=31]
+[ext_resource path="res://GameScene/Level2/Sfondo_frammenti.gd" type="Script" id=32]
+
+[sub_resource type="DynamicFont" id=5]
+size = 70
+outline_size = 2
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 26
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 1, 1, 1, 0 )
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 70
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 40
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 20
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+content_margin_top = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=37]
+size = 22
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 1, 0.545098, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=16]
+size = 12
+use_filter = true
+font_data = ExtResource( 21 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.94902, 0.529412, 0.0196078, 0.117647 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0, 0.0862745, 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0, 0.0862745, 1, 0 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.495
+anchor_top = 0.513
+anchor_right = 0.495
+anchor_bottom = 0.513
+margin_left = -674.88
+margin_top = -387.8
+margin_right = 1251.12
+margin_bottom = 694.2
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )
+stretch_mode = 1
+
+[node name="Water" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 499.857
+margin_top = -58.1429
+margin_right = 747.857
+margin_bottom = 396.857
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Water"]
+position = Vector2( 133.333, 229.667 )
+texture = ExtResource( 7 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 9 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/Water/Sprite"]
+stream = ExtResource( 23 )
+volume_db = 10.0
+
+[node name="Armadietto" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 74.0
+margin_top = -399.0
+margin_right = 437.0
+margin_bottom = -86.0001
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Armadietto"]
+position = Vector2( 191.333, 174.667 )
+texture = ExtResource( 19 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 15 )
+
+[node name="Cassetta_Armadio" type="Button" parent="TextureRect/Armadietto/Sprite"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -186.833
+margin_top = -242.167
+margin_right = -121.833
+margin_bottom = -172.167
+focus_mode = 0
+disabled = true
+enabled_focus_mode = 0
+flat = true
+
+[node name="Papera" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 323.667
+margin_top = -467.667
+margin_right = 390.667
+margin_bottom = -405.667
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Papera"]
+position = Vector2( 33.3333, 33.6666 )
+texture = ExtResource( 13 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 9 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect/Papera/Sprite"]
+position = Vector2( -1211.67, -65.3329 )
+scale = Vector2( 1.66667, 1.66667 )
+stream = ExtResource( 22 )
+volume_db = 20.0
+
+[node name="Finestra" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -713.0
+margin_top = -434.0
+margin_right = -428.0
+margin_bottom = -73.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Finestra"]
+position = Vector2( 133.333, 194.333 )
+texture = ExtResource( 5 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 6 )
+
+[node name="Lavandino" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -271.0
+margin_top = 121.0
+margin_right = -168.0
+margin_bottom = 192.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Lavandino"]
+position = Vector2( 47.9998, 14.0001 )
+texture = ExtResource( 2 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 4 )
+
+[node name="Secchio" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -238.0
+margin_top = 227.333
+margin_right = -101.0
+margin_bottom = 377.333
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Secchio"]
+position = Vector2( 63.3329, 52.3331 )
+texture = ExtResource( 16 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 17 )
+
+[node name="Piante" type="Sprite" parent="TextureRect"]
+position = Vector2( 657.143, 692.857 )
+texture = ExtResource( 18 )
+script = ExtResource( 31 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pianta1" type="Button" parent="TextureRect/Piante"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.5
+margin_top = -503.5
+margin_right = -55.5
+margin_bottom = -232.5
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pianta2" type="Button" parent="TextureRect/Piante"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -682.5
+margin_top = -685.5
+margin_right = -606.5
+margin_bottom = -553.5
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pianta3" type="Button" parent="TextureRect/Piante"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1205.5
+margin_top = -353.5
+margin_right = -1076.5
+margin_bottom = -89.5
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sfondo_cassetta" type="ColorRect" parent="TextureRect"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Esci" type="Button" parent="TextureRect/Sfondo_cassetta"]
+margin_left = 108.571
+margin_top = 82.8571
+margin_right = 175.571
+margin_bottom = 162.857
+focus_mode = 0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 0.627451 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 0.627451 )
+custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 0
+text = "X"
+flat = true
+
+[node name="Cassetta" type="Button" parent="TextureRect/Sfondo_cassetta"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.502
+margin_top = -159.0
+margin_right = 365.498
+margin_bottom = 260.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_cassetta/Cassetta"]
+position = Vector2( 362, 151.333 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 14 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 20 )
+
+[node name="Chiave" type="Button" parent="TextureRect/Sfondo_cassetta/Cassetta/Sprite"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -528.5
+margin_top = -238.5
+margin_right = -478.5
+margin_bottom = -143.5
+rect_rotation = -30.0
+focus_mode = 0
+disabled = true
+enabled_focus_mode = 0
+flat = true
+
+[node name="Sfondo_chiave" type="ColorRect" parent="TextureRect"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -200.0
+margin_top = -200.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Esci" type="Button" parent="TextureRect/Sfondo_chiave"]
+margin_right = 33.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 0.627451 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 0.627451 )
+custom_fonts/font = SubResource( 20 )
+text = "X"
+flat = true
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_chiave"]
+position = Vector2( 98.5723, 102.857 )
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 24 )
+
+[node name="Sfondo_secchio" type="ColorRect" parent="TextureRect"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -200.0
+margin_top = -200.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Esci" type="Button" parent="TextureRect/Sfondo_secchio"]
+margin_right = 33.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 0.627451 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 0.627451 )
+custom_fonts/font = SubResource( 20 )
+text = "X"
+flat = true
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_secchio"]
+position = Vector2( 98.5723, 102.857 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 30 )
+
+[node name="Sfondo_frammenti" type="ColorRect" parent="TextureRect"]
+visible = false
+anchor_left = 0.459
+anchor_top = 0.461
+anchor_right = 0.459
+anchor_bottom = 0.461
+margin_left = -884.034
+margin_top = -498.802
+margin_right = 1042.97
+margin_bottom = 583.198
+color = Color( 0, 0, 0, 0.509804 )
+script = ExtResource( 32 )
+
+[node name="Lavandino" type="Sprite" parent="TextureRect/Sfondo_frammenti"]
+position = Vector2( 734.286, 461.429 )
+scale = Vector2( 1.03, 1.03 )
+texture = ExtResource( 29 )
+
+[node name="Frammento1" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 355.498
+margin_top = 105.0
+margin_right = 506.498
+margin_bottom = 169.0
+focus_mode = 0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 24 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_frammenti/Frammento1"]
+position = Vector2( 80.5701, 31.571 )
+texture = ExtResource( 27 )
+
+[node name="Frammento2" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 127.023
+margin_top = 140.667
+margin_right = 313.023
+margin_bottom = 217.667
+rect_rotation = -35.0
+rect_pivot_offset = Vector2( 363.869, 14.5234 )
+focus_mode = 0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/disabled = SubResource( 34 )
+custom_styles/normal = SubResource( 24 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_frammenti/Frammento2"]
+position = Vector2( 86.3171, 36.3734 )
+rotation = 0.610865
+texture = ExtResource( 25 )
+
+[node name="Frammento3" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 175.498
+margin_top = 112.0
+margin_right = 283.498
+margin_bottom = 249.0
+focus_mode = 0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/disabled = SubResource( 35 )
+custom_styles/normal = SubResource( 24 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_frammenti/Frammento3"]
+position = Vector2( 53.4301, 68.857 )
+texture = ExtResource( 26 )
+
+[node name="Frammento4" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 425.498
+margin_top = 243.0
+margin_right = 490.498
+margin_bottom = 335.0
+focus_mode = 0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 28 )
+custom_styles/disabled = SubResource( 36 )
+custom_styles/normal = SubResource( 24 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Sfondo_frammenti/Frammento4"]
+position = Vector2( 33.4302, 46.428 )
+texture = ExtResource( 28 )
+
+[node name="F1" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -113.502
+margin_top = 85.9999
+margin_right = -22.5021
+margin_bottom = 125.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="F2" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -163.502
+margin_top = 180.0
+margin_right = -40.502
+margin_bottom = 232.0
+rect_rotation = -30.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="F3" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -110.502
+margin_top = 199.0
+margin_right = -53.502
+margin_bottom = 262.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="F4" type="Button" parent="TextureRect/Sfondo_frammenti"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.5022
+margin_top = 272.0
+margin_right = -56.5022
+margin_bottom = 328.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Esci" type="Button" parent="TextureRect/Sfondo_frammenti"]
+margin_left = 108.571
+margin_top = 82.8571
+margin_right = 175.571
+margin_bottom = 162.857
+focus_mode = 0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 0.627451 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 0.627451 )
+custom_fonts/font = SubResource( 21 )
+enabled_focus_mode = 0
+text = "X"
+flat = true
+
+[node name="Obiettivo" type="ReferenceRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 369.0
+margin_top = -345.0
+margin_right = 647.0
+margin_bottom = -255.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Dina" type="TextureRect" parent="Obiettivo"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -82.0
+margin_right = 307.0
+margin_bottom = 414.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+stretch_mode = 1
+flip_h = true
+
+[node name="Label" type="Label" parent="Obiettivo"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -271.0
+margin_top = 23.0
+margin_right = -94.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "- Aggiusta il lavandino
+- Svuota il secchio 
+    d'acqua"
+
+[node name="Vittoria" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Titolo" type="Label" parent="Vittoria"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -321.0
+margin_top = -200.0
+margin_right = 321.0
+margin_bottom = -111.0
+custom_fonts/font = SubResource( 9 )
+text = "Hai completato il livello 
+con successo"
+align = 1
+
+[node name="Suggerimento" type="ReferenceRect" parent="Vittoria"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Dina" type="TextureRect" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.0
+margin_top = -40.0
+margin_right = -52.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 11 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -162.0
+margin_top = -16.0
+margin_right = 186.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_styles/normal = SubResource( 29 )
+text = " Complimenti!! Hai riutilizzato l'acqua. Ricordati che l'acqua è molto importante, non sprecarla!"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = 200.0
+margin_right = 70.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 37 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 39 )
+custom_styles/normal = SubResource( 40 )
+text = "avanti"
+__meta__ = {
+"_editor_description_": "	"
+}
+
+[node name="Intro" type="ReferenceRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Dina" type="TextureRect" parent="Intro"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.0
+margin_top = -40.0
+margin_right = -52.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 11 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Intro"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -16.0
+margin_right = 270.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_styles/normal = SubResource( 29 )
+text = "Oh no!! In questa casa il lavandino è rotto! Bisogna fare subito qualcosa, non sprecare l'acqua che sta perdendo    "
+align = 1
+autowrap = true
+
+[node name="avanti" type="Label" parent="Intro/Label"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -26.0
+margin_right = -12.0
+margin_bottom = -11.0
+custom_colors/font_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "premi"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Intro/Label"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -211.0
+margin_top = -45.5
+margin_right = 211.0
+margin_bottom = 45.5
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+
+[connection signal="mouse_entered" from="TextureRect/Water" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Water" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Water" to="TextureRect/Water/Sprite" method="_on_Water_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Armadietto" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Armadietto" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Armadietto" to="TextureRect/Armadietto/Sprite" method="_on_Armadietto_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Armadietto/Sprite/Cassetta_Armadio" to="." method="_mouse_entered_2"]
+[connection signal="mouse_exited" from="TextureRect/Armadietto/Sprite/Cassetta_Armadio" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Armadietto/Sprite/Cassetta_Armadio" to="." method="_on_Cassetta_Armadio_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Papera" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Papera" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Papera" to="TextureRect/Papera/Sprite" method="_on_Papera_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Finestra" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Finestra" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Finestra" to="TextureRect/Finestra/Sprite" method="_on_Finestra_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Lavandino" to="." method="_mouse_entered_Lavandino"]
+[connection signal="mouse_exited" from="TextureRect/Lavandino" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Lavandino" to="." method="_on_Lavandino_pressed"]
+[connection signal="pressed" from="TextureRect/Lavandino" to="TextureRect/Lavandino/Sprite" method="_on_Lavandino_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Secchio" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Secchio" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Secchio" to="." method="_on_Secchio_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Piante/Pianta1" to="." method="_mouse_entered_Pianta"]
+[connection signal="mouse_exited" from="TextureRect/Piante/Pianta1" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Piante/Pianta1" to="TextureRect/Piante" method="_on_Pianta1_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Piante/Pianta2" to="." method="_mouse_entered_Pianta"]
+[connection signal="mouse_exited" from="TextureRect/Piante/Pianta2" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Piante/Pianta2" to="TextureRect/Piante" method="_on_Pianta2_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Piante/Pianta3" to="." method="_mouse_entered_Pianta"]
+[connection signal="mouse_exited" from="TextureRect/Piante/Pianta3" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Piante/Pianta3" to="TextureRect/Piante" method="_on_Pianta3_pressed"]
+[connection signal="pressed" from="TextureRect/Sfondo_cassetta/Esci" to="." method="_on_Esci_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Sfondo_cassetta/Cassetta" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Sfondo_cassetta/Cassetta" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Sfondo_cassetta/Cassetta" to="TextureRect/Sfondo_cassetta/Cassetta/Sprite" method="_on_Cassetta_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Sfondo_cassetta/Cassetta/Sprite/Chiave" to="." method="_mouse_entered_2"]
+[connection signal="mouse_exited" from="TextureRect/Sfondo_cassetta/Cassetta/Sprite/Chiave" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Sfondo_cassetta/Cassetta/Sprite/Chiave" to="." method="_on_Chiave_pressed"]
+[connection signal="pressed" from="TextureRect/Sfondo_chiave/Esci" to="." method="_on_Esci_pressed_Chiave"]
+[connection signal="pressed" from="TextureRect/Sfondo_secchio/Esci" to="." method="_on_Esci_pressed_Secchio"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/Frammento1" to="TextureRect/Sfondo_frammenti" method="_on_Frammento1_pressed"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/Frammento2" to="TextureRect/Sfondo_frammenti" method="_on_Frammento2_pressed"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/Frammento3" to="TextureRect/Sfondo_frammenti" method="_on_Frammento3_pressed"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/Frammento4" to="TextureRect/Sfondo_frammenti" method="_on_Frammento4_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Sfondo_frammenti/F1" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Sfondo_frammenti/F1" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/F1" to="TextureRect/Sfondo_frammenti" method="_on_F1_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Sfondo_frammenti/F2" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Sfondo_frammenti/F2" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/F2" to="TextureRect/Sfondo_frammenti" method="_on_F2_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Sfondo_frammenti/F3" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Sfondo_frammenti/F3" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/F3" to="TextureRect/Sfondo_frammenti" method="_on_F3_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Sfondo_frammenti/F4" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Sfondo_frammenti/F4" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/F4" to="TextureRect/Sfondo_frammenti" method="_on_F4_pressed"]
+[connection signal="pressed" from="TextureRect/Sfondo_frammenti/Esci" to="." method="_on_Esci_pressed_Lavandino"]
+[connection signal="pressed" from="Vittoria/Suggerimento/Button" to="." method="_back"]
+[connection signal="pressed" from="Intro/Label/Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,468 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://GameScene/Level1/img/sala.png" type="Texture" id=1]
+[ext_resource path="res://GameScene/Level1/Lampada.gd" type="Script" id=2]
+[ext_resource path="res://GameScene/Level1/img/Lampadario/Lampadario1.png" type="Texture" id=3]
+[ext_resource path="res://GameScene/Level1/Neon.gd" type="Script" id=4]
+[ext_resource path="res://GameScene/Level1/Lampadario.gd" type="Script" id=5]
+[ext_resource path="res://GameScene/Level1/img/Lampada/Lampada1.png" type="Texture" id=6]
+[ext_resource path="res://GameScene/Level1/Level.gd" type="Script" id=7]
+[ext_resource path="res://Global/Font/Rubik/static/Rubik-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://GameScene/Level1/img/Neon/Neon1.png" type="Texture" id=9]
+[ext_resource path="res://Global/Font/arco/ARCO for OSX.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://Entities/Dina.png" type="Texture" id=11]
+[ext_resource path="res://Global/Font/Rubik/Rubik-VariableFont_wght.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://GameScene/Level1/img/Lampadina/Lampadina1.png" type="Texture" id=13]
+[ext_resource path="res://GameScene/Level1/Lampadina.gd" type="Script" id=14]
+[ext_resource path="res://Global/Font/Rubik/static/Rubik-SemiBold.ttf" type="DynamicFontData" id=15]
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 40
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 20
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_top = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=17]
+size = 22
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 1, 0.545098, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=11]
+size = 20
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.94902, 0.529412, 0.0196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=13]
+size = 12
+use_filter = true
+font_data = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.94902, 0.529412, 0.0196078, 0.117647 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0.0862745, 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0.0862745, 1, 0 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.491
+anchor_top = 0.5
+anchor_right = 0.491
+anchor_bottom = 0.5
+margin_left = -660.784
+margin_top = -379.0
+margin_right = 1265.22
+margin_bottom = 701.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )
+stretch_mode = 1
+
+[node name="Lampadina1" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 695.333
+margin_top = -235.0
+margin_right = 757.333
+margin_bottom = -164.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Lampadina1"]
+position = Vector2( 31.9998, 2.99997 )
+texture = ExtResource( 13 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 14 )
+
+[node name="Lampadina2" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 825.333
+margin_top = -258.333
+margin_right = 887.333
+margin_bottom = -187.333
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Lampadina2"]
+position = Vector2( 31.9998, 2.99997 )
+texture = ExtResource( 13 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 14 )
+
+[node name="Neon1" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -461.333
+margin_top = -291.667
+margin_right = -108.333
+margin_bottom = -257.667
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Neon1"]
+position = Vector2( 170, 25.0003 )
+scale = Vector2( 3.02976, 3.49792 )
+texture = ExtResource( 9 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 4 )
+
+[node name="Neon2" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 110.333
+margin_top = -291.667
+margin_right = 463.333
+margin_bottom = -257.667
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Neon2"]
+position = Vector2( 170, 23.3333 )
+scale = Vector2( 3.02976, 3.49792 )
+texture = ExtResource( 9 )
+offset = Vector2( 1.52588e-05, -1.27754 )
+script = ExtResource( 4 )
+
+[node name="Lampada" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -656.0
+margin_top = -115.0
+margin_right = -545.0
+margin_bottom = 15.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Lampada"]
+position = Vector2( 56.6667, 295 )
+texture = ExtResource( 6 )
+script = ExtResource( 2 )
+
+[node name="Lampadario" type="Button" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -84.5001
+margin_top = -326.667
+margin_right = 84.5
+margin_bottom = -198.667
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TextureRect/Lampadario"]
+position = Vector2( 85.3334, 325 )
+texture = ExtResource( 3 )
+script = ExtResource( 5 )
+
+[node name="Obiettivo" type="ReferenceRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -598.0
+margin_top = -345.0
+margin_right = -280.0
+margin_bottom = -258.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Dina" type="TextureRect" parent="Obiettivo"]
+margin_left = -30.0
+margin_top = 4.0
+margin_right = 359.0
+margin_bottom = 418.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Obiettivo"]
+margin_left = 70.0
+margin_top = 40.0
+margin_right = 316.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Risparmia piu' energia che puoi"
+
+[node name="Vittoria" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Titolo" type="Label" parent="Vittoria"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -321.0
+margin_top = -200.0
+margin_right = 321.0
+margin_bottom = -111.0
+custom_fonts/font = SubResource( 14 )
+text = "Hai completato il livello 
+con successo"
+align = 1
+
+[node name="Suggerimento" type="ReferenceRect" parent="Vittoria"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Dina" type="TextureRect" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.0
+margin_top = -40.0
+margin_right = -52.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 11 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -162.0
+margin_top = -16.0
+margin_right = 227.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+text = " Ce l'hai fatta!! Hai risparmiato dell'energia. Ricordati sempre di spegnere la luce quando non serve!"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Vittoria/Suggerimento"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = 200.0
+margin_right = 70.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 17 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+text = "avanti"
+__meta__ = {
+"_editor_description_": "	"
+}
+
+[node name="Intro" type="ReferenceRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Dina" type="TextureRect" parent="Intro"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -442.0
+margin_top = -40.0
+margin_right = -52.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 11 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Intro"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -16.0
+margin_right = 227.0
+margin_bottom = 78.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Anche tu vuoi aiutare a risparmiare 
+un po' di corrente? Allora non far sprecare energia a questa casa    "
+align = 1
+autowrap = true
+
+[node name="avanti" type="Label" parent="Intro/Label"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -26.0
+margin_right = -12.0
+margin_bottom = -11.0
+custom_colors/font_color = Color( 0.94902, 0.717647, 0.0196078, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "premi"
+align = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="Intro/Label"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -188.5
+margin_top = -42.0
+margin_right = 189.5
+margin_bottom = 43.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 5 )
+
+[connection signal="mouse_entered" from="TextureRect/Lampadina1" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Lampadina1" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Lampadina1" to="TextureRect/Lampadina1/Sprite" method="_on_Lampadina1_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Lampadina2" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Lampadina2" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Lampadina2" to="TextureRect/Lampadina2/Sprite" method="_on_Lampadina2_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Neon1" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Neon1" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Neon1" to="TextureRect/Neon1/Sprite" method="_on_Neon_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Neon2" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Neon2" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Neon2" to="TextureRect/Neon2/Sprite" method="_on_Neon_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Lampada" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Lampada" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Lampada" to="TextureRect/Lampada/Sprite" method="_on_Lampada_pressed"]
+[connection signal="mouse_entered" from="TextureRect/Lampadario" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Lampadario" to="." method="_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Lampadario" to="TextureRect/Lampadario/Sprite" method="_on_Lampadario_pressed"]
+[connection signal="pressed" from="Vittoria/Suggerimento/Button" to="." method="_back"]
+[connection signal="pressed" from="Intro/Label/Button" to="." method="_on_Button_pressed"]
